@@ -85,26 +85,62 @@ def initiation():
     pemesanan = [[None]*1000 for i in range(7)]
     
 def login():
-    U_name = int(input("Silakan Masukkan Username : "))
-    U_pw = int(input("Silakan Masukkan Password : "))
-    for i in range(length(pengguna)):
+    U_name = str(input("Silakan Masukkan Username : "))
+    U_pw = str(input("Silakan Masukkan Password : "))
+    i = 0
+    while pengguna[0][i] != None :
         if find(U_name,pengguna[0]) == 1:
             if pengguna[2][i] == "administrator":
                 return 1
             elif pengguna[2][i] == "customer":
                 return 2
-    return 0
-
+        i += 1 
+    print("Pengguna tidak ditemukan")
+    print("Menginisiasi user baru...")
+    pengguna[0][i] = input(("Masukkan ulang username : "))
+    pengguna[1][i] = input(("Masukkan password : "))
+    pengguna[2][i] = "customer"
+    print("Selamat datang,",pengguna[0][i])
+    return 2
+def pemesanan()
 def main():
+    global i
     lanjut = 1
     initiation()
     while lanjut > 0: 
         print("Sistem Manajemen Laundry")
         print("="*30)
-        is_found = find(U_name,pengguna[0])
-        if is_found == 0:
-            
-        
+        auth = login()
+        print("Selamat datang,", pengguna[0][i])
+        print("-"*30)
+        print("Silakan masukkan aksi")
+        if auth == 1:
+            print("[1] Menambahkan akun admin")
+            print("[2] Mengecek kondisi peralatan")
+            print("[3] Mengecek riwayat pemesanan")
+            print("[4] Mengecek list pembayaran")
+            print("[5] Statistik")
+            print("[6] Keluar")
+            print("-"*20)
+            act = int(input("Pilihan Anda"))
+            if act == 1:
+                
+            elif act == 2:
+                
+            elif act == 3:
+                
+            elif act == 4:
+                
+            elif act == 2:
+                
+            elif act == 2:
+                
+        elif auth == 2:
+            print("[1] Memesan pemesanan")
+            print("[2] Mengecek kondisi peralatan")
+            print("[3] Keluar")
+            print("-"*20)
+            i = int(input("Pilihan Anda"))
 if __name__ == '__main__':
     main()
     
