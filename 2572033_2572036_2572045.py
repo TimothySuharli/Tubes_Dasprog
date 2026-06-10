@@ -1,14 +1,13 @@
 # Nama File: Sistem Informasi Laundry
 # Nama Penulis: Joseph Xavier Tan - 2572033
-#               Timothy Suharli - 2572036 <- KING Piton
-#               Yosia Krisanusama - 2572045 <- KING Alin
+#               Timothy Suharli - 2572036
+#               Yosia Krisanusama - 2572045
 # Tujuan Program: 
 # Kamus Data: 
 # Name_List: var. kumpulan username[str]
 # Pw_List: var. kumpulan password[str]
 # U_name: var input username (str)
 # U_pw: var input password (str)
-
 
 ## Tujuan fungsi: Mereturn apakah yang dicari ada di fungsi
 ## Kamus lokal: 
@@ -174,7 +173,7 @@ def pemesanan(C):
         elif (PP==12):
             arr_pemesanan[C][5] = 30000*arr_pemesanan[C][1]
     else:
-        print ("Pilihan invalid, REFUTE, Contradiction line 3 and 11 , X/0 , X=Infinity -iq")
+        print ("Pilihan invalid")
         pemesanan()
 # Status Cucian (queue/WAIT)     
     # arr_pemesanan[C][6]= str(input("Status Cucian(Y/N)"))
